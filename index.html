@@ -234,6 +234,118 @@
             }
         }
 
+                /* Footer with leaf pile */
+        .footer {
+            width: 100%;
+            height: 120px;
+            position: relative;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        .leaf-pile {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            pointer-events: none;
+        }
+
+        .pile-leaf {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.6;
+            transform-origin: center;
+            animation: gentleSway 8s infinite ease-in-out;
+        }
+
+        /* Different leaf emojis for variety */
+        .pile-leaf:nth-child(1n) { content: '🌿'; }
+        .pile-leaf:nth-child(2n) { content: '🍃'; }
+        .pile-leaf:nth-child(3n) { content: '🌱'; }
+        .pile-leaf:nth-child(4n) { content: '🍀'; }
+
+        .pile-leaf::before {
+            content: '🌿';
+        }
+
+        .pile-leaf:nth-child(2n)::before {
+            content: '🍃';
+        }
+
+        .pile-leaf:nth-child(3n)::before {
+            content: '🌱';
+        }
+
+        .pile-leaf:nth-child(4n)::before {
+            content: '🍀';
+        }
+
+        /* Bottom layer - largest pile */
+        .pile-leaf:nth-child(1) { bottom: 5px; left: 5%; font-size: 28px; animation-delay: 0s; }
+        .pile-leaf:nth-child(2) { bottom: 8px; left: 8%; font-size: 26px; animation-delay: 1s; }
+        .pile-leaf:nth-child(3) { bottom: 3px; left: 12%; font-size: 30px; animation-delay: 2s; }
+        .pile-leaf:nth-child(4) { bottom: 10px; left: 15%; font-size: 24px; animation-delay: 3s; }
+        .pile-leaf:nth-child(5) { bottom: 6px; left: 18%; font-size: 27px; animation-delay: 4s; }
+        .pile-leaf:nth-child(6) { bottom: 12px; left: 22%; font-size: 25px; animation-delay: 5s; }
+        .pile-leaf:nth-child(7) { bottom: 4px; left: 25%; font-size: 29px; animation-delay: 6s; }
+        .pile-leaf:nth-child(8) { bottom: 9px; left: 28%; font-size: 26px; animation-delay: 7s; }
+
+        /* Middle section */
+        .pile-leaf:nth-child(9) { bottom: 7px; left: 32%; font-size: 28px; animation-delay: 0.5s; }
+        .pile-leaf:nth-child(10) { bottom: 11px; left: 35%; font-size: 25px; animation-delay: 1.5s; }
+        .pile-leaf:nth-child(11) { bottom: 5px; left: 38%; font-size: 27px; animation-delay: 2.5s; }
+        .pile-leaf:nth-child(12) { bottom: 13px; left: 42%; font-size: 24px; animation-delay: 3.5s; }
+        .pile-leaf:nth-child(13) { bottom: 8px; left: 45%; font-size: 30px; animation-delay: 4.5s; }
+        .pile-leaf:nth-child(14) { bottom: 6px; left: 48%; font-size: 26px; animation-delay: 5.5s; }
+        .pile-leaf:nth-child(15) { bottom: 10px; left: 52%; font-size: 28px; animation-delay: 6.5s; }
+        .pile-leaf:nth-child(16) { bottom: 4px; left: 55%; font-size: 25px; animation-delay: 7.5s; }
+
+        /* Right section */
+        .pile-leaf:nth-child(17) { bottom: 9px; left: 58%; font-size: 27px; animation-delay: 1s; }
+        .pile-leaf:nth-child(18) { bottom: 12px; left: 62%; font-size: 24px; animation-delay: 2s; }
+        .pile-leaf:nth-child(19) { bottom: 6px; left: 65%; font-size: 29px; animation-delay: 3s; }
+        .pile-leaf:nth-child(20) { bottom: 8px; left: 68%; font-size: 26px; animation-delay: 4s; }
+        .pile-leaf:nth-child(21) { bottom: 11px; left: 72%; font-size: 28px; animation-delay: 5s; }
+        .pile-leaf:nth-child(22) { bottom: 5px; left: 75%; font-size: 25px; animation-delay: 6s; }
+        .pile-leaf:nth-child(23) { bottom: 13px; left: 78%; font-size: 27px; animation-delay: 7s; }
+        .pile-leaf:nth-child(24) { bottom: 7px; left: 82%; font-size: 24px; animation-delay: 0.5s; }
+
+        /* Far right */
+        .pile-leaf:nth-child(25) { bottom: 10px; left: 85%; font-size: 26px; animation-delay: 1.5s; }
+        .pile-leaf:nth-child(26) { bottom: 4px; left: 88%; font-size: 28px; animation-delay: 2.5s; }
+        .pile-leaf:nth-child(27) { bottom: 8px; left: 92%; font-size: 25px; animation-delay: 3.5s; }
+        .pile-leaf:nth-child(28) { bottom: 12px; left: 95%; font-size: 27px; animation-delay: 4.5s; }
+
+        /* Second layer - on top */
+        .pile-leaf:nth-child(29) { bottom: 15px; left: 10%; font-size: 22px; animation-delay: 5.5s; }
+        .pile-leaf:nth-child(30) { bottom: 18px; left: 20%; font-size: 24px; animation-delay: 6.5s; }
+        .pile-leaf:nth-child(31) { bottom: 16px; left: 30%; font-size: 23px; animation-delay: 7.5s; }
+        .pile-leaf:nth-child(32) { bottom: 20px; left: 40%; font-size: 21px; animation-delay: 0.8s; }
+        .pile-leaf:nth-child(33) { bottom: 17px; left: 50%; font-size: 25px; animation-delay: 1.8s; }
+        .pile-leaf:nth-child(34) { bottom: 19px; left: 60%; font-size: 22px; animation-delay: 2.8s; }
+        .pile-leaf:nth-child(35) { bottom: 16px; left: 70%; font-size: 24px; animation-delay: 3.8s; }
+        .pile-leaf:nth-child(36) { bottom: 21px; left: 80%; font-size: 23px; animation-delay: 4.8s; }
+
+        /* Top layer - scattered */
+        .pile-leaf:nth-child(37) { bottom: 25px; left: 15%; font-size: 20px; animation-delay: 0.3s; }
+        .pile-leaf:nth-child(38) { bottom: 28px; left: 35%; font-size: 19px; animation-delay: 1.3s; }
+        .pile-leaf:nth-child(39) { bottom: 26px; left: 55%; font-size: 21px; animation-delay: 2.3s; }
+        .pile-leaf:nth-child(40) { bottom: 30px; left: 75%; font-size: 18px; animation-delay: 3.3s; }
+
+        @keyframes gentleSway {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(2deg) scale(1.02);
+            }
+            75% {
+                transform: rotate(-1deg) scale(0.98);
+            }
+        }
+
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5em;
@@ -251,6 +363,24 @@
             .designers {
                 gap: 20px;
             }
+            
+
+            .footer {
+                height: 100px;
+            }
+
+            .leaf-pile {
+                height: 60px;
+            }
+
+            .pile-leaf {
+                font-size: 20px;
+            }
+
+            .pile-leaf:nth-child(1) { font-size: 22px; }
+            .pile-leaf:nth-child(3) { font-size: 24px; }
+            .pile-leaf:nth-child(7) { font-size: 23px; }
+            .pile-leaf:nth-child(13) { font-size: 24px; }
         }
     </style>
 </head>
@@ -277,6 +407,55 @@
         <p class="tagline">Coming Soon</p>
 
     </div>
+    <!-- Footer with leaf pile -->
+    <footer class="footer">
+        <div class="leaf-pile">
+            <!-- Bottom layer leaves -->
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <!-- Second layer leaves -->
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <!-- Top layer leaves -->
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+            <div class="pile-leaf"></div>
+        </div>
+    </footer>
+    
 </body>
 
 </html>
