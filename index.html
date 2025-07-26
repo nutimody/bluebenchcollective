@@ -22,13 +22,15 @@
             font-style: normal;
             background: #f8f7f4;
             height: 100vh;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            overflow-x: hidden;
-            overflow-y: hidden;
+            overflow: hidden;
             position: relative;
+            margin: 0;
+            padding: 0;
         }
 
         /* Animated background elements */
@@ -86,13 +88,14 @@
             text-align: center;
             z-index: 10;
             position: relative;
-            padding: 40px;
+            padding: 20px;
             max-width: 800px;
             width: 100%;
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            box-sizing: border-box;
         }
 
         .artwork-container {
@@ -445,8 +448,24 @@
             }
 
             .pile-leaf {
-                font-size: 16px;
+                font-size: 14px;
             }
+
+            .container {
+                padding: 10px;
+            }
+
+            /* Add more leaves at screen edges for mobile */
+            .pile-leaf:nth-child(1) { left: 2%; }
+            .pile-leaf:nth-child(2) { left: 98%; }
+            .pile-leaf:nth-child(5) { left: 0%; }
+            .pile-leaf:nth-child(8) { left: 99%; }
+            .pile-leaf:nth-child(12) { left: 1%; }
+            .pile-leaf:nth-child(15) { left: 97%; }
+            .pile-leaf:nth-child(20) { left: 3%; }
+            .pile-leaf:nth-child(25) { left: 96%; }
+            .pile-leaf:nth-child(30) { left: 0.5%; }
+            .pile-leaf:nth-child(35) { left: 99.5%; }
         }
     </style>
 </head>
