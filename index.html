@@ -21,12 +21,13 @@
             font-weight: 400;
             font-style: normal;
             background: #f8f7f4;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             overflow-x: hidden;
+            overflow-y: hidden;
             position: relative;
         }
 
@@ -130,11 +131,14 @@
         /* Footer Styles */
         .footer {
             width: 100%;
-            position: relative;
+            position: fixed;
+            bottom: 0;
+            left: 0;
             background: linear-gradient(to bottom, transparent 0%, #e8e6e1 50%, #ddd9d2 100%);
-            padding: 60px 0 40px 0;
-            margin-top: 60px;
+            padding: 60px 0 0 0;
             overflow: hidden;
+            height: 100px;
+            z-index: 5;
         }
 
         /* Leaf Pile - Natural distribution with more leaves in center */
@@ -432,7 +436,8 @@
             }
 
             .footer {
-                padding: 40px 0 30px 0;
+                padding: 40px 0 0 0;
+                height: 80px;
             }
 
             .leaf-pile {
